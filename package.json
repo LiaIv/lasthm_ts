@@ -1,0 +1,19 @@
+{
+  "name": "personal-budget-cli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Интерактивный менеджер личных финансов на TypeScript",
+  "type": "module",
+  "engines": { "node": ">=20.18.0" },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/main.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit --noUnusedLocals --noUnusedParameters --noFallthroughCasesInSwitch --noImplicitReturns",
+    "test": "npm run build && node --test tests",
+    "test:coverage": "npm run build && node --experimental-test-coverage --test tests",
+    "check": "npm run lint && npm test"
+  },
+  "dependencies": { "inquirer": "12.11.1" },
+  "devDependencies": { "@types/node": "20.19.43", "typescript": "5.9.3" }
+}
